@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Reset default spacing for all elements to ensure a consistent starting point */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+/* Use flexbox to horizontally center the character container in the viewport */
+
+#character1 {
+  position: relative;
+  height: 900px;
+  width: 400px;
+transition:  transform 0.3s ease-in-out;
+ 
+}
+/* Character container: establishes a 900px tall by 400px wide area.
+   Relative positioning allows its child elements (body parts) to be absolutely positioned
+   within an anatomical framework representing the character’s overall form. */
+
+#character1 #head {
+    position: absolute;
+    top: 0%;
+    height: 100px;
+    width: 100px;
+  background: url('./assets/images/characters/body_parts/head.png')
+    no-repeat center center/cover;
+}
+/* Head: Positioned 20px from the top edge of the container.
+   Centered horizontally using left: 50% with a -50% X-axis translation.
+   The 100px by 100px dimensions simulate the scale of a human head within the anatomical structure. */
+
+#character1 #neck {
+ position: absolute;
+ top: 8.8%;
+ left: 9%;
+  height: 40px;
+  width: 40px;
+  background: url('./assets/images/characters/body_parts/neck.png')
+    no-repeat center center/cover;
+}
+/* Neck: Positioned directly beneath the head.
+   The 11.5% top offset is used to align the neck with the head’s lower boundary.
+   A slight horizontal adjustment (left: 51% with translation) ensures it is centered relative to the head.
+   Its slender dimensions (40px by 30px) reflect a natural neck proportion. */
+
+#character1 #body {
+  position: absolute;
+  top: 11%;
+  height: 150px;
+  width: 100px;
+  background: url('./assets/images/characters/body_parts/body.png')
+    no-repeat center center/cover;
+}
+/* Body: Centered under the neck.
+   The top offset of 12% positions the torso immediately below the neck.
+   The centering method is consistent with the head and neck, with 120px by 200px dimensions representing the torso's natural proportions. */
+
+#character1  #left_hand {
+  position: absolute;
+  top: 12%;
+  left: -9%;
+  height: 200px;
+  width: 70px;
+  background: url('./assets/images/characters/body_parts/left_hand.png')
+    no-repeat center center/contain;
+    background-size: 100% 100%;
+}
+/* Left Hand/Arm: Attached to the torso.
+   The 20px top offset aligns it with the upper part of the torso.
+   The -30% left offset projects it outward, creating a natural anatomical stance.
+   The size of 50px by 150px reflects the arm’s elongated structure. */
+
+   #character1 #right_hand {
+   position: absolute;
+   top: 18.5%;
+   left: 2%;
+    height: 200px; /* Match left hand height */
+    width: 100px; /* Match left hand width */
+    background: url('./assets/images/characters/body_parts/right_hand.png')
+      no-repeat center center/cover;
+    transform: scale(4);
+  }
+  #character1 #left_hand, #character1 #right_hand {
+    background-size: 100% 100%; /* Forces image to fit the exact width and height */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+/* Right Hand/Arm: Also attached to the torso.
+   Negative offsets (top: -45% and left: -100%) position it to extend dramatically from the body,
+   suggesting an outstretched arm in anatomical terms.
+   Its large dimensions (400px by 500px) are used to create a visual emphasis on the arm's reach and extension. */
+
+#character1 #left_leg {
+ position: absolute;
+ top: 27%;
+
+ height: 200px;
+ width: 50px;
+
+  background: url('./assets/images/characters/body_parts/left_leg.png')
+    no-repeat center center/cover;
+}
+/* Left Leg: Positioned beneath the torso.
+   The 33% top offset marks the beginning of the lower body section.
+   A left offset of 140px aligns it anatomically with the body's left side.
+   The dimensions (60px by 200px) replicate the slender, extended form of a human leg. */
+
+#character1 #left_foot {
+  position: absolute;
+  top: 47%;
+  height: 50px;
+  width: 50px;
+  background: url('./assets/images/characters/body_parts/left_foot.png')
+    no-repeat center center/cover;
+}
+/* Left Foot: Nested within the left leg.
+   The 200px top offset places the foot at the very end of the leg,
+   with dimensions (60px by 50px) that accurately represent the foot's proportion relative to the leg. */
+
+#character1 #right_leg {
+  position: absolute;
+  top: 17%;
+  left: 7%;
+  height: 200px;
+  width: 50px;
+
+  background: url('./assets/images/characters/body_parts/right_leg.png')
+    no-repeat center center/cover;
+    transform: scale(4)
+}
+#character1 #right_foot {
+   position: absolute;
+  top: 47%;
+  left: 10%;
+  height: 50px;
+  width: 50px;
+  
+    background: url('./assets/images/characters/body_parts/right_foot.png')
+      no-repeat center center/cover;
+  }
