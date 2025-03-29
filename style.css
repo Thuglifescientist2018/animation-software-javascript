@@ -14,7 +14,10 @@ body {
   position: relative;
   height: 900px;
   width: 400px;
-transition:  transform 0.3s ease-in-out;
+
+animation-duration: 0.3s;
+animation-iteration-count: 1;
+z-index: -1;
  
 }
 /* Character container: establishes a 900px tall by 400px wide area.
@@ -141,4 +144,18 @@ transition:  transform 0.3s ease-in-out;
   
     background: url('./assets/images/characters/body_parts/right_foot.png')
       no-repeat center center/cover;
+  }
+button {
+  z-index: 2;
+}
+  @keyframes jump {
+    0% {
+      transform: translateY(0px)
+    }
+    50% {
+      transform: translateY(100px)
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
